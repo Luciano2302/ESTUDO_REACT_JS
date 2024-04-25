@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Input from "../input/index.js";
 import { useState } from "react";
-import { livros } from "./dadosPesquisa.js";	
+import { livros } from "./dadosPesquisa.js";
+import { Titulo } from "../titulo/index.js";	
 
 const PesquisaContainer = styled.section`
     display: flex;
@@ -10,12 +11,6 @@ const PesquisaContainer = styled.section`
     margin-top: 20px;
     margin-bottom: 20px;
 `;
-
-const Titulo = styled.h2`
-    font-size: 36px;
-    color: #FFF;
-`;
-
 const Subtitulo = styled.h3`
     font-size: 16px;
     color: #FFF;
@@ -26,7 +21,7 @@ function Pesquisa(){
     
     return( 
         <PesquisaContainer>
-          <Titulo>Já sabe por onde começar?</Titulo>
+          <Titulo cor="red" tamanhoDeFonte="36px">Já sabe por onde começar?</Titulo>
           <Subtitulo>Encontre seu livro em nossa estante.</Subtitulo>
           <Input placeholder="O que deseja encontrar?"
             onBlur={(evento) => {

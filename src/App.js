@@ -1,6 +1,9 @@
 import Header from './components/header/index.js';
 import styled from 'styled-components';
 import PesquisaContainer from './components/pesquisa/index.js';
+import UltimosLancamentos from './components/ultimoslancamentos/index.js';
+import CardRecomenda from './components/cardrecomenda/index.js';
+import imagem from './images/livro.png';
 
 const AppContainer = styled.div`
   width: 100vw;
@@ -13,6 +16,13 @@ function App() {
     <AppContainer>  
       <Header/>
       <PesquisaContainer />
+      <UltimosLancamentos />
+      <CardRecomenda 
+        titulo="Teste"
+        subtitulo="Angular 11"
+        descricao="Construindo uma aplicação"
+        imagem={imagem}
+      />
     </AppContainer>
   );
 }
